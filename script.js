@@ -18,7 +18,7 @@ const scontoOver65 = 0.40
 
 
 const calcolaBiglietto = function () {
-    let numerokm = document.getElementById ('km').value;
+    let numeroKm = document.getElementById ('km').value;
     let age = document.getElementById ('age').value;
     /* console.log (km);
     console.log (age); */
