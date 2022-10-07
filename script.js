@@ -18,14 +18,15 @@ const scontoOver65 = 0.40
 
 
 const calcolaBiglietto = function () {
-    let km = document.getElementById ('km').value;
+    let numerokm = document.getElementById ('km').value;
     let age = document.getElementById ('age').value;
     /* console.log (km);
     console.log (age); */
     
     if(isNaN (numeroKm) || isNaN(etaUtente)) {
-            alert('devi inserire numeri');
-
+            alert('devi inserire numeri')
+        };
+    let prezzoBiglietto = numeroKm * prezzoKm
     if(etaUtente <= 18){
         prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * scontoUnder18)
         messaggio += ` ${prezzoBiglietto}€ Hai ricevuto uno sconto del 20%`;
@@ -38,8 +39,8 @@ const calcolaBiglietto = function () {
     }
 }
 
-let prezzoBiglietto = numeroKm * prezzoKm
-btn.addEventListener ('click, calcolaBiglietto');
+
+btn.addEventListener ('click', calcolaBiglietto);
 
 let messaggio = `
 <h1> Il costo del tuo biglietto è: </h1> `;
@@ -47,4 +48,3 @@ let messaggio = `
 
 
 document.getElementById('biglietto').innerHTML += messaggio;
-}
