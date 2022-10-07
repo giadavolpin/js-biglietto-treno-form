@@ -14,7 +14,7 @@ const btn = document.getElementById ('calcola');
 const prezzoKm = 0.21
 const scontoUnder18 = 0.20
 const scontoOver65 = 0.40 
-let prezzoBiglietto = numeroKm * prezzoKm
+
 
 
 const calcolaBiglietto = function () {
@@ -38,6 +38,7 @@ const calcolaBiglietto = function () {
     }
 }
 
+let prezzoBiglietto = numeroKm * prezzoKm
 btn.addEventListener ('click, calcolaBiglietto');
 
 let messaggio = `
@@ -46,3 +47,4 @@ let messaggio = `
 
 
 document.getElementById('biglietto').innerHTML += messaggio;
+}
