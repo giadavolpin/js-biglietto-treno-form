@@ -20,8 +20,8 @@ let prezzoBiglietto = numeroKm * prezzoKm
 const calcolaBiglietto = function () {
     let km = document.getElementById ('km').value;
     let age = document.getElementById ('age').value;
-    console.log (km);
-    console.log (age);
+    /* console.log (km);
+    console.log (age); */
     
     if(isNaN (numeroKm) || isNaN(etaUtente)) {
             alert('devi inserire numeri');
