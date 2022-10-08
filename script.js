@@ -10,7 +10,7 @@ se utente età under 18 prezzo biglietto
 Altrimenti se utente età over65 prezzo biglietto prezzoBiglietto
     prezzoBiglietto * scontoOver65
 */
-const btn = document.getElementById ('calcola');
+const btn = document.getElementById ('calcola').innerHTML;
 const prezzoKm = 0.21
 const scontoUnder18 = 0.20
 const scontoOver65 = 0.40 
@@ -39,8 +39,8 @@ const calcolaBiglietto = function () {
     }
 }
 
-
-btn.addEventListener ('click', calcolaBiglietto);
+/* 
+btn.addEventListener ('click', calcolaBiglietto); */
 
 let messaggio = `
 <h1> Il costo del tuo biglietto è: </h1> `;
