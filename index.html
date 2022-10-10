@@ -5,20 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>biglietto treno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
 </head>
 <body>
-    <div id="biglietto">
-        <h3>Quanti km deve fare?</h3>
-        <input type="number" value="0" id="km">    
-        <h3>Quanti anni ha?</h3> 
-        <input type="number" value="0" id="age">
-        <button onclick="calcola" id="calcola">Calcola</button>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Treniboolean</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Chi siamo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Prezzi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- biglietto -->
+
+    <div class="row">
+        <label class="col">Quanti km vuoi fare?</label>
+        <input class="col-2" type="number" value="0" id="km" placeholder="Inserisci i km">    
     </div>
+    <div class="row">
+        <label class="col">Quanti anni hai?</label> 
+        <input class="col-2" type="number" value="0" id="age" placeholder="Inserisci età">
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-light" id="bottone" name="button">Genera</button>
+        <button type="button" class="btn btn-light" id="annulla" name="button">Annulla</button>
+      </div>
+     
+    <section class="biglietto">
+        <h2 class="title">Il tuo biglietto</h2>
+        <div id="biglietto" class="hidden">
+          <h2>Dettaglio passeggeri</h2>
+          <div class="dati">
+            <div class="nome">
+              <h2>Nome Passeggero <span id="eta"></span></h2>
+              <h3 id="nome-passeggero"></h3>
+            </div>
+            <div class="offerta">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Offerta</th>
+                    <th>Costo biglietto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span id="offerta-applicata"></span></td>
+                    <td><span id="costo"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
     <script src="./script.js"> 
-    
-
-    
-
 </body>
 </html>
