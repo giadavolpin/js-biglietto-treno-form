@@ -12,17 +12,21 @@ Altrimenti se utente età over65 prezzo biglietto prezzoBiglietto
 */
 
 
-// salviamo in una variabile il nostro bottone
-const bottone = document.getElementById('bottone');
+const nome = document.getElementById('nome').value;
+const km = document.getElementById('km').value;
+const age = document.getElementById('age').value;
 
-//rimaniamo in ascolto di un evento click su quel bottone
+// salviamo in una variabile il nostro bottone
+const bottone = document.getElementById('genera');
+
+//rimaniamo in ascolto di un evento, il click su quel bottone
 bottone.addEventListener('click',
   function () {
      // prendiamo il valore dell'input km
      const kmDaPercorrere = document.getElementById('km').value;
      console.log(kmDaPercorrere);
       // prendiamo il valore della select fascia eta
-    const fasciaEta = document.getElementById('fascia-eta').value;
+    const fasciaEta = document.getElementById('age').value;
     console.log(fasciaEta);
      // I nostri dati per il calcolo del biglietto
      const prezzoKm = 0.21;
@@ -44,15 +48,17 @@ bottone.addEventListener('click',
       // lasciamo solo due decimali
       costoBiglietto = costoBiglietto.toFixed(2);
 
-       // stampiamo
-    document.getElementById('nome-passeggero').innerHTML = nome;
-    document.getElementById('offerta-applicata').innerHTML = offerta;
-    document.getElementById('costo').innerHTML = costoBiglietto + '€';
   }
   );
+     // stampiamo
+     document.getElementById('nome-passeggero').innerHTML = nome;
+     document.getElementById('offerta-applicata').innerHTML = offerta;
+     document.getElementById('costo').innerHTML = costoBiglietto + '€';
+
+
 // salviamo in una variabile il nostro bottone annulla
 const bottoneAnnulla = document.getElementById('annulla');
-
+/*
 //rimaniamo in ascolto di un evento click sul bottone annulla
 bottoneAnnulla.addEventListener('click',
   function () {
@@ -68,4 +74,4 @@ bottoneAnnulla.addEventListener('click',
     document.getElementById('offerta-applicata').innerHTML = '';
     document.getElementById('costo').innerHTML = '';
   }
-);
+); */

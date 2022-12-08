@@ -36,27 +36,30 @@
         </div>
       </nav>
       <!-- biglietto -->
-
+    <div class="row">
+        <label class="col">Come ti chiami?</label>
+        <select class="col-2" type="text" value="0" id="nome" placeholder="Inserisci il nome">    
+    </div>
     <div class="row">
         <label class="col">Quanti km vuoi fare?</label>
-        <input class="col-2" type="number" value="0" id="km" placeholder="Inserisci i km">    
+        <select class="col-2" type="number" value="0" id="km" placeholder="Inserisci i km">    
     </div>
     <div class="row">
         <label class="col">Quanti anni hai?</label> 
-        <input class="col-2" type="number" value="0" id="age" placeholder="Inserisci età">
+        <select class="col-2" type="number" value="0" id="age" placeholder="Inserisci età">
     </div>
     <div class="row">
-        <button type="button" class="btn btn-light" id="bottone" name="button">Genera</button>
+        <button type="button" class="btn btn-light" id="genera" name="button">Genera</button>
         <button type="button" class="btn btn-light" id="annulla" name="button">Annulla</button>
       </div>
      
     <section class="biglietto">
-        <h2 class="title">Il tuo biglietto</h2>
+        <h2 class="title">Il tuo biglietto:</h2>
         <div id="biglietto" class="hidden">
-          <h2>Dettaglio passeggeri</h2>
+          <h2>Dettaglio passeggeri:</h2>
           <div class="dati">
             <div class="nome">
-              <h2>Nome Passeggero <span id="eta"></span></h2>
+              <h2>Nome Passeggero:<span id="eta"></span></h2>
               <h3 id="nome-passeggero"></h3>
             </div>
             <div class="offerta">
