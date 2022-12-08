@@ -50,6 +50,9 @@ bottone.addEventListener('click',
 
   }
   );
+
+  const prezzoBiglietto = 
+
      // stampiamo
      document.getElementById('nome-passeggero').innerHTML = nome;
      document.getElementById('offerta-applicata').innerHTML = offerta;
