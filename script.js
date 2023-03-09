@@ -17,10 +17,10 @@ const km = document.getElementById('km').value;
 const age = document.getElementById('age').value;
 
 // salviamo in una variabile il nostro bottone
-const bottone = document.getElementById('genera');
+const genera = document.getElementById('genera');
 
 //rimaniamo in ascolto di un evento, il click su quel bottone
-bottone.addEventListener('click',
+genera.addEventListener('click',
   function () {
      // prendiamo il valore dell'input km
      const kmDaPercorrere = document.getElementById('km').value;
@@ -50,12 +50,11 @@ bottone.addEventListener('click',
 
   }
   );
-
+  console.log('costoBiglietto')
   const prezzoBiglietto = 
 
      // stampiamo
-     document.getElementById('nome-passeggero').innerHTML = nome;
-     document.getElementById('offerta-applicata').innerHTML = offerta;
+     document.getElementById('nome-passeggero').innerHTML += nome;
      document.getElementById('costo').innerHTML = costoBiglietto + '€';
 
 
@@ -70,7 +69,7 @@ bottoneAnnulla.addEventListener('click',
 
     // svuotiamo gli input
     document.getElementById('km').value = '';
-    document.getElementById('fascia-eta').value = '';
+    document.getElementById('age').value = '';
 
     // svuotiamo gli altri elementi
     document.getElementById('nome-passeggero').innerHTML = '';
